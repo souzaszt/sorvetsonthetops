@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>May Ice-Creams | Menu</title>
+  <link rel="stylesheet" href="menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="index.html">home</a></li>
+        <li><a href="cntt.html">contato</a></li>
+        <li><a class="active" href="menu.html">menu</a></li>
+        <li><a href="#">sobre nós</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="menu-page">
+    <section class="menu-section">
+      <h2>Cardápio</h2>
+      <ul class="menu-list" id="menu-list">
+      </ul>
+    </section>
+
+    <section class="cart-section">
+      <h2>🛒 Carrinho</h2>
+      <ul id="cart-items"></ul>
+      <button onclick="clearCart()">Esvaziar Carrinho</button>
+    </section>
+  </main>
+
+  <script>
+    const menuItems = [
+      "Sorvete de Chocolate",
+      "Sorvete de Baunilha",
+      "Sorvete de Morango",
+      "Milkshake de Ovomaltine",
+      "Açaí na Tigela",
+      "Sundae de Caramelo",
+      "Coxinha de Frango",
+      "Cachorro-quente",
+      "Churros recheados com doce de leite",
+      "Cupcake de Sorvete",
+      "Torta de Sorvete",
+      "Picolé de Limão",
+      "Picolé de Frutas Vermelhas",
+      "Bebida de Chá Gelado",
+      "Lemonade (Limonada)",
+      "Café Gelado",
+      "Smoothie de Manga",
+      "Crepe de Sorvete",
+      "Waffle com Sorvete e Frutas",
+      "Bolo de Sorvete",
+      "Batata Frita",
+      "Mini Pizzas",
+      "Macaron de Sorvete",
+      "Bebida de Frappuccino",
+      "Sorvete de Pistache"
+    ];
+
+    const menuList = document.getElementById("menu-list");
+    const cartItems = document.getElementById("cart-items");
+
+    menuItems.forEach(item => {
+      const li = document.createElement("li");
+      li.innerHTML = `${item} <button onclick="addToCart('${item}')">Adicionar</button>`;
+      menuList.appendChild(li);
+    });
+
+    function addToCart(item) {
+      const li = document.createElement("li");
+      li.textContent = item;
+      cartItems.appendChild(li);
+    }
+
+    function clearCart() {
+      cartItems.innerHTML = '';
+    }
+  </script>
+</body>
+</html>

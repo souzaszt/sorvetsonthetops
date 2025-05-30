@@ -1,0 +1,119 @@
+body {
+    background-color: #9966ff;
+    font-family: 'overpass', sans-serif;
+  }
+  
+  .menu-page {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px;
+    color: white;
+  }
+  
+  .menu-section, .cart-section {
+    background-color: #33caff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 45%;
+    min-width: 300px;
+  }
+  
+  .menu-section h2, .cart-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .menu-list, #cart-items {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .menu-list li, #cart-items li {
+    background-color: #00bfff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .menu-list button {
+    padding: 6px 12px;
+    background-color: #fff;
+    color: #00bfff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .menu-list button:hover {
+    background-color: #e0f7ff;
+  }
+  
+  .cart-section button {
+    margin-top: 15px;
+    background-color: #ff6666;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .cart-section button:hover {
+    background-color: #cc0000;
+  }
+
+  .nav-bar {
+    background-color: #33caff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #00bfff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid black;
+    transition: background 0.3s;
+  }
+  
+  .nav-links a.active,
+  .nav-links a:hover {
+    background-color: #0099cc;
+  }
+
+  nav a {
+    border: 2px solid transparent;
+    background-image: linear-gradient(#33caff, #33caff), radial-gradient(circle at top left, #00bfff, #33caff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-position: right center;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
